@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>New Tab</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="favicon.ico" />
+      <link rel="icon" href="favicon.ico" />
+      <link rel="apple-touch-icon" href="favicon.ico" />
+      <script src="https://kit.fontawesome.com/1dee8fd18a.js" defer crossorigin="anonymous"></script>
+      <script>
+         function startTime(){
+           var today = new Date(), h = today.getHours(), m = today.getMinutes(), s = today.getSeconds(), ampm = h >= 12 ? "PM" : "AM";
+           h = checkHour(h); m = checkTime(m); s = checkTime(s);
+           document.getElementById('time').innerHTML = h+":"+m+":"+s+"&nbsp;"+ampm;
+           setTimeout(startTime, 500);
+         }
+         function checkTime(i) {if (i < 10){i = "0" + i} return i}
+         function checkHour(i) {if (i == 0 || i == 12){i = "12"} else {i = i % 12} return i}
+      </script>
+      <style>
+         :root {--back:rgb(59,59,59); --divider:rgb(43,43,43); --shadow:rgb(43,43,43);
+         --text:rgb(128,128,128); --back-hover:rgb(51,51,51); --active:rgb(150,150,150); }
+         * {font-family:'Consolas',sans-serif; color:var(--text); -webkit-text-size-adjust:none;
+         text-decoration:none; font-size:1rem; padding:0; margin:0; }
+         body {background-color:var(--back); padding:0; margin:0; }
+         hr {border:0; height:1px; background-color:var(--divider); }
+         p {text-indent:1rem; line-height:0.9; }
+         .sm-show {display:none; }
+         .pad {padding:0.25rem 0.50rem; }
+         .image {display:block; max-width:100%; margin:auto; }
+         .list {list-style-type:square; padding-left:2rem; line-height:0.9; }
+         #time {font-weight:bold; text-align:center; padding:0.25rem 0.75rem; }
+         #footer {text-align:right; padding:0.25rem 0.75rem; }
+         .grid1 {display:grid; background-color:var(--divider); grid-template-columns:repeat(5,min-content) auto; grid-gap:1px; }
+         .grid1 > * {background-color:var(--back); }
+         .grid1 > a {padding:0.3rem 0.5rem; text-shadow:2px 2px 2px var(--shadow); text-align:center; }
+         .grid1 > a:hover {background-color:var(--back-hover); }
+         .grid1 > a:active {background-color:var(--divider); color:var(--active); }
+         .grid2 {display:grid; background-color:var(--divider); grid-template-columns:1fr 3fr; grid-gap:1px; }
+         .grid2 > * {background-color:var(--back); }
+         @media only screen and (max-width: 475px) {
+         .grid1 {grid-template-columns:repeat(4,auto); }
+         .grid1 > * {font-size:1.5rem; }
+         .grid2 {grid-template-columns:auto; }
+         .sm-hide {display:none; } .sm-show {display:block; }
+         #time {grid-column: 1 / -1; }
+         }
+      </style>
+   <body onload="startTime()">
+      <hr class="sm-show">
+      <div class="grid1">
+         <div id="time"></div>
+         <a href="https://github.com/ax-88/ax-88.github.io" class="fab fa-github"></a>
+         <a href="https://github.com/ax-88/ax-88.github.io/edit/main/index.html" class="fas fa-pen-square"></a>
+         <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default" class="fas fa-flask"></a>
+         <a href="https://ax-88.github.io/index.html" download class="fas fa-download"></a>
+         <div class="sm-hide"></div>
+      </div>
+      <hr>
+      <div class="grid2">
+         <div>
+            <div class="pad">
+               <p>Proin accumsan dignissim felis, non ultricies dolor dignissim sit amet.</p>
+               <ul class="pad list">
+                  <li>Suspendisse finibus tortor nec justo cursus, ut posuere mauris iaculis.</li>
+                  <li>Suspendisse finibus tortor nec justo cursus, ut posuere mauris iaculis.</li>
+                  <li>Suspendisse finibus tortor nec justo cursus, ut posuere mauris iaculis.</li>
+               </ul>
+               <p>Suspendisse finibus tortor nec justo cursus, ut posuere mauris iaculis. Mauris lacinia lectus quis sagittis tincidunt.</p>
+            </div>
+            <hr>
+            <div class="pad">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor sem neque, quis convallis libero finibus ac. Proin accumsan dignissim felis.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor sem neque, quis convallis libero finibus ac. Proin accumsan dignissim felis.</p>
+            </div>
+         </div>
+         <div>
+            <div class="pad">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor sem neque, quis convallis libero finibus ac. Proin accumsan dignissim felis, non ultricies dolor dignissim sit amet. Ut magna ipsum, vestibulum vel euismod quis, ultricies in nunc. Donec a sagittis sapien. Cras non convallis eros. Curabitur non arcu a dolor aliquet commodo nec quis eros. Suspendisse finibus tortor nec justo cursus, ut posuere mauris iaculis. Mauris lacinia lectus quis sagittis tincidunt. Proin viverra, sem fermentum ullamcorper vestibulum, mauris nisi posuere lacus, a aliquet urna enim id ante. Quisque auctor velit in ex luctus sollicitudin.</p>
+            </div>
+            <div>
+               <svg width="400" height="100" class="image">
+                  <rect width="400" height="100" style="fill:#333; stroke-width:1; stroke:#222" />
+               </svg>
+            </div>
+            <div class="pad">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor sem neque, quis convallis libero finibus ac. Proin accumsan dignissim felis, non ultricies dolor dignissim sit amet. Ut magna ipsum, vestibulum vel euismod quis, ultricies in nunc. Donec a sagittis sapien. Cras non convallis eros. Curabitur non arcu a dolor aliquet commodo nec quis eros. Suspendisse finibus tortor nec justo cursus, ut posuere mauris iaculis. Mauris lacinia lectus quis sagittis tincidunt. Proin viverra, sem fermentum ullamcorper vestibulum, mauris nisi posuere lacus, a aliquet urna enim id ante. Quisque auctor velit in ex luctus sollicitudin.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor sem neque, quis convallis libero finibus ac. Proin accumsan dignissim felis, non ultricies dolor dignissim sit amet. Ut magna ipsum, vestibulum vel euismod quis, ultricies in nunc. Donec a sagittis sapien. Cras non convallis eros. Curabitur non arcu a dolor aliquet commodo nec quis eros. Suspendisse finibus tortor nec justo cursus, ut posuere mauris iaculis. Mauris lacinia lectus quis sagittis tincidunt. Proin viverra, sem fermentum ullamcorper vestibulum, mauris nisi posuere lacus, a aliquet urna enim id ante. Quisque auctor velit in ex luctus sollicitudin.</p>
+            </div>
+         </div>
+      </div>
+      <hr>
+      <div id="footer">CC BY-NC-SA 4.0</div>
+   </body>
+</html>
