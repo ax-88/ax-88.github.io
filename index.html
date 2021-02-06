@@ -8,6 +8,7 @@
       <link rel="icon" href="favicon.ico" />
       <link rel="apple-touch-icon" href="favicon.ico" />
       <script src="https://kit.fontawesome.com/1dee8fd18a.js" defer crossorigin="anonymous"></script>
+
       <script>
          var clock;
          function startTime(){
@@ -25,8 +26,9 @@
            clearTimeout(clock);
          }
       </script>
+
       <style>
-         :root {--back:rgb(59,59,59); --divider:rgb(43,43,43); --shadow:rgb(43,43,43); --gap:1px; 
+         :root {--back:rgb(59,59,59); --divider:rgb(43,43,43); --shadow:rgb(43,43,43); --gap:1px;
          --text:rgb(128,128,128); --back-hover:rgb(51,51,51); --active:rgb(150,150,150); }
          * {font-family:'Consolas',sans-serif; color:var(--text);
          text-decoration:none; font-size:1rem; padding:0; margin:0; }
@@ -55,8 +57,11 @@
          #time {grid-column: 1 / -1; width:auto; }
          }
       </style>
+
    <body onload="startTime()">
+
       <hr class="sm-show">
+
       <div class="grid1">
          <div id="time"></div>
          <a href="https://github.com/ax-88/ax-88.github.io" class="fab fa-github" onmouseover="changeText('Github')" onmouseleave="startTime()"></a>
@@ -65,7 +70,9 @@
          <a href="https://ax-88.github.io/index.html" download class="fas fa-download" onmouseover="changeText('Download')" onmouseleave="startTime()"></a>
          <div class="sm-hide"></div>
       </div>
+
       <hr>
+
       <div class="grid2">
          <div>
             <div class="pad">
@@ -94,7 +101,10 @@
             </div>
          </div>
       </div>
+
       <hr>
+
       <div id="footer">CC BY-NC-SA 4.0</div>
+
    </body>
 </html>
