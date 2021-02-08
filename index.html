@@ -48,7 +48,7 @@
          .navbar {display:grid; background-color:var(--divider); grid-template-columns:repeat(5,max-content) auto;
           position:-webkit-sticky; position:sticky; top:0; grid-gap:var(--gap); }
          .navbar > div,a {background-color:var(--back); text-align:center; padding:0.25rem 0.75rem; min-height:1.1rem; min-width:1.1rem; }
-         .navbar > hr {height:0; min-height:0 }
+         .navbar > hr {height:0; min-height:0; grid-column: 1 / -1; }
          .navbar > .button {padding:0.3rem 0.5rem; text-shadow:2px 2px 2px var(--shadow); }
          .navbar > .button:hover {background-color:var(--back-hover); }
          .navbar > .button:active {background-color:var(--divider); color:var(--active); }
@@ -59,7 +59,7 @@
          @media only screen and (max-width: 475px) {
          p {line-height:1.0; }
 
-         .navbar {grid-template-columns:repeat(4,auto); }
+         .navbar {grid-template-columns:max-content repeat(4,auto); }
          .navbar > * {font-size:1.5rem; min-height:1.75rem; }
 
          .grid1 {grid-template-columns:auto; }
@@ -67,7 +67,7 @@
          .sm-hide {display:none; }
          .sm-show {display:block; }
 
-         #time {grid-column: 1 / -1; width:auto; }
+         #time {width:12rem; }
          }
       </style>
 
