@@ -45,22 +45,24 @@
          #time {font-weight:bold; width:6rem; }
          #footer {text-align:right; padding:0.25rem 0.75rem; }
 
-         .grid1 {display:grid; background-color:var(--divider); grid-template-columns:repeat(5,max-content) auto; grid-gap:var(--gap); }
-         .grid1 > * {background-color:var(--back); text-align:center; padding:0.25rem 0.75rem; min-height:1.1rem; min-width:1.1rem; }
-         .grid1 > .button {padding:0.3rem 0.5rem; text-shadow:2px 2px 2px var(--shadow); }
-         .grid1 > .button:hover {background-color:var(--back-hover); }
-         .grid1 > .button:active {background-color:var(--divider); color:var(--active); }
+         .navbar {display:grid; background-color:var(--divider); grid-template-columns:repeat(5,max-content) auto;
+          position:-webkit-sticky; position:sticky; top:0; grid-gap:var(--gap); }
+         .navbar > div,a {background-color:var(--back); text-align:center; padding:0.25rem 0.75rem; min-height:1.1rem; min-width:1.1rem; }
+         .navbar > hr {height:0; min-height:0 }
+         .navbar > .button {padding:0.3rem 0.5rem; text-shadow:2px 2px 2px var(--shadow); }
+         .navbar > .button:hover {background-color:var(--back-hover); }
+         .navbar > .button:active {background-color:var(--divider); color:var(--active); }
 
-         .grid2 {display:grid; background-color:var(--divider); grid-template-columns:1fr 3fr; grid-gap:var(--gap); }
-         .grid2 > * {background-color:var(--back); }
+         .grid1 {display:grid; background-color:var(--divider); grid-template-columns:1fr 3fr; grid-gap:var(--gap); }
+         .grid1 > * {background-color:var(--back); }
 
          @media only screen and (max-width: 475px) {
          p {line-height:1.0; }
 
-         .grid1 {grid-template-columns:repeat(4,auto); }
-         .grid1 > * {font-size:1.5rem; min-height:1.75rem; }
+         .navbar {grid-template-columns:repeat(4,auto); }
+         .navbar > * {font-size:1.5rem; min-height:1.75rem; }
 
-         .grid2 {grid-template-columns:auto; }
+         .grid1 {grid-template-columns:auto; }
 
          .sm-hide {display:none; }
          .sm-show {display:block; }
@@ -71,20 +73,18 @@
 
    <body onload="startTime()">
 
-      <hr class="sm-show">
-
-      <div class="grid1">
+      <div class="navbar">
+         <hr class="sm-show">
          <div id="time"></div>
          <a href="https://github.com/ax-88/ax-88.github.io" class="fab fa-github button" onmouseover="changeText('Github')" onmouseleave="startTime()"></a>
          <a href="https://github.com/ax-88/ax-88.github.io/edit/main/index.html" class="fas fa-pen-square button" onmouseover="changeText('Edit')" onmouseleave="startTime()"></a>
          <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default" class="fas fa-flask button" onmouseover="changeText('W3Schools')" onmouseleave="startTime()"></a>
          <a href="https://ax-88.github.io/index.html" download class="fas fa-download button" onmouseover="changeText('Download')" onmouseleave="startTime()"></a>
          <div class="sm-hide"></div>
+         <hr>
       </div>
 
-      <hr>
-
-      <div class="grid2">
+      <div class="grid1">
          <div>
             <div class="pad">
                <p>Proin accumsan dignissim felis, non ultricies dolor dignissim sit amet.</p>
